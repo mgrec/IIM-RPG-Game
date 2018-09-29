@@ -1,0 +1,71 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/***** CHOOSE YOUR CLASS CSS *****/
+
+.website-choose-class{
+    text-align: center;
+    height: auto;
+    padding-top: 50px;
+}
+
+.section-classes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.section-classes .content-class{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-classes .content-class .classe-image{
+    width: 150px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px
+}
+
+.section-classes .content-class .classe-about{
+    max-width: 350px;
+    line-height: 20px;
+    font-weight: lighter;
+    margin-bottom: 35px;
+}
+
+.section-classes .content-class .btn-choose{
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.section-classes .content-class .btn-choose:hover{
+    border: 2px solid black;
+    padding: 15px;
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
+.website-choose-class .btn-play{
+     margin-top: 80px;
+     border: 2px solid black;
+     padding: 15px;
+     width: 200px;
+    cursor: pointer;
+    font-family: 'Titillium Web', sans-serif;
+ }
+
+.website-choose-class .btn-play:hover{
+    margin-top: 80px;
+    border: 2px solid black;
+    padding: 15px;
+    width: 200px;
+    color: white;
+    background: black;
+}
+/*********************************/
