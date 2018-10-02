@@ -41,6 +41,6 @@ class Router
                 return $route->call();
             }
         }
-        throw new \Exception('No route matches');
+        throw new \Exception('No routes matches');
     }
 }

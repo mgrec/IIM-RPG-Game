@@ -8,21 +8,27 @@
 require_once "vendor/autoload.php";
 
 // mode debug if local
-if ($_SERVER["HTTP_HOST"] == "iim-php-rpg-game.local:8888"){
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-}
-
+//if ($_SERVER["HTTP_HOST"] == "iim-php-rpg-game.local:8888"){
+//    error_reporting(E_ALL);
+//    ini_set('display_errors', 1);
+//}
 $router = new App\Router\Router($_GET["url"]);
 
-// route closure
-$router->get('/', function (){ echo "accueil";});
-$router->get('/users', function (){ echo "page des users";});
-$router->get('/user/:id', function ($id){ echo "page de l'user $id";});
-$router->get('/combat/:id-:idmonster', function ($id, $idmonster){ echo "page de combat de l'user $id contre le monstre $idmonster";});
+// -- route controller page du site -- //
+$router->get('/', "Page@welcomeAction");
+$router->get('/bestiaire', "Page@bestaireAction");
+$router->get('/login', "Page@loginAction");
 
-// route controller
-$router->get('/controllertest', "Home@index");
-$router->get('/controllertest/:id', "Home@indexPerso");
+// -- route controller jeu -- //
+$router->get('/logout', function (){
+    session_start();
+    unset($_SESSION['id_player']);
+    session_unset();
+    session_destroy();
+    header('Location: /');
+});
+$router->get('/choose-class', "Game@chooseClassAction");
+$router->get('/level-up', "Game@levelUpAction");
+
 
 $router->run();

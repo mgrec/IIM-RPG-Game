@@ -1,6 +1,9 @@
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !favicon.ico$
+    RewriteRule ^(.*) index.php?url=$1 [QSA,L]
+</IfModule>
 
-RewriteCond {REQUEST_FILNAME} !-f
-RewriteCond {REQUEST_FILNAME} !-d
-
-RewriteRule ^(.*) index.php?url=$1 [QSA,L]
+#RewriteRule ^(.*) index.php?url=$1 [QSA,L]

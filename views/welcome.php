@@ -2,11 +2,9 @@
 /**
  * Created by PhpStorm.
  * User: maxime
- * Date: 29/09/2018
- * Time: 17:14
+ * Date: 03/10/2018
+ * Time: 00:56
  */
-session_start();
-$_SESSION['id_player'] = 1;
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,6 +16,6 @@ $_SESSION['id_player'] = 1;
     <title>Document</title>
 </head>
 <body>
-now logged !
+welcome aventurier !
 </body>
 </html>
