@@ -5,7 +5,6 @@
  * Date: 29/09/2018
  * Time: 17:14
  */
-session_start();
 $_SESSION['id_player'] = 1;
 ?>
 <!doctype html>

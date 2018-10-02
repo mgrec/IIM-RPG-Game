@@ -25,7 +25,7 @@
 <div class="website-wrapper website-level-up">
 
     <div class="general-about">
-        <p>Tu as passé un niveau ! Tu es maintenant niveau : 12</p>
+        <p>Tu as passé un niveau ! Tu es maintenant niveau : <?= isset($lvl) ? $lvl : null ?></p>
     </div>
 
     <div class="section-level-up">
