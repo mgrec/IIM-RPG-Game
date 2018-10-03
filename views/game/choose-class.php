@@ -38,7 +38,7 @@
             <p class="classe-about">
                 Les bandits sont de véritables assassins. Ils ont une force acru, ce qui leur permettent d'eliminer leurs ennemis facilement et rapidement !
             </p>
-            <div class="btn-choose">
+            <div data-id="1" class="btn-choose">
                 Je suis un bandit
             </div>
         </div>
@@ -48,19 +48,23 @@
             <p class="classe-about">
                 Les mages possèdent des nombreuses connaissances en terme de sorcelerie. Leurs sortilèges de soins sont les plus puissants !
             </p>
-            <div class="btn-choose">
+            <div data-id="2" class="btn-choose">
                 Je suis un mage
             </div>
         </div>
     </div>
 
     <div class="play">
-        <form action="">
-            <input hidden type="text" value="1">
+        <form method="post" action="">
+            <input class="pseudo-input" name="pseudo" type="text"><br />
+            <input hidden class="input-class" name="class" type="text">
             <input class="btn-play" type="button" value="Commencer à jouer">
         </form>
     </div>
 </div>
+
+<script src="assets/js/library/jquery.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
 

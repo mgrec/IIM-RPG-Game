@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: maxime
- * Date: 29/09/2018
- * Time: 17:14
+ * Date: 04/10/2018
+ * Time: 00:39
  */
 ?>
 <!doctype html>
@@ -16,12 +16,9 @@
     <title>Document</title>
 </head>
 <body>
-
-<form method="post" action="">
-    <input type="text" name="email">
-    <input type="password" name="password">
-    <input type="submit" value="connection">
-</form>
-
+    Mon compte :
+    <p>email : <?= $user->getEmail() ?></p>
+    <p>crée le : <?= $user->getDateSubscribe() ?></p>
+    <p>dernière connexion le : <?= $user->getDateLastConnection() ?></p>
 </body>
 </html>

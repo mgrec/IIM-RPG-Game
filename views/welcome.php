@@ -16,6 +16,6 @@
     <title>Document</title>
 </head>
 <body>
-welcome aventurier <?= isset($id_player) ? $id_player : null?>!
+welcome aventurier!
 </body>
 </html>

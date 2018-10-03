@@ -55,6 +55,14 @@ body{
     cursor: pointer;
 }
 
+.section-classes .content-class .btn-choose.active{
+    border: 2px solid black;
+    padding: 15px;
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
 .website-choose-class .btn-play{
     margin-top: 80px;
     border: 2px solid black;
@@ -62,6 +70,14 @@ body{
     width: 200px;
     cursor: pointer;
     font-family: 'Titillium Web', sans-serif;
+}
+
+.website-choose-class .pseudo-input{
+    width: 300px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 4px;
+    font-size: 18px;
 }
 
 .website-choose-class .btn-play:hover{

@@ -14,15 +14,33 @@ if ($_SERVER["HTTP_HOST"] == "iim-php-rpg-game.local:8888"){
 }
 $router = new App\Router\Router($_GET["url"]);
 
-// -- route controller page du site -- //
+//# -- route controller page du site -- #//
+// page
 $router->get('/', "Page@welcomeAction");
 $router->get('/bestiaire', "Page@bestaireAction");
+
+// page inscription
+$router->get('/subscribe', "Page@subscribeAction");
+$router->post('/subscribe', "Page@subscribeAction");
+
+// page connexion
 $router->get('/login', "Page@loginAction");
+$router->post('/login', "Page@loginAction");
+
+// page account
+$router->get('/account', "Page@accountAction");
+
+// page deconnexion
 $router->get('/logout', "Page@logoutAction");
 
-// -- route controller jeu -- //
-$router->get('/choose-class', "Game@chooseClassAction");
-$router->get('/level-up', "Game@levelUpAction");
 
+//# -- route controller jeu -- #//
+
+//choose class
+$router->get('/choose-class', "Game@chooseClassAction");
+$router->get('/choose-class', "Game@chooseClassAction");
+
+// pass level
+$router->get('/level-up', "Game@levelUpAction");
 
 $router->run();
